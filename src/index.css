@@ -374,3 +374,85 @@ body.dark-theme .container {
     text-align: center;
     color: var(--color-placeholder);
 }
+
+/* Make container flexible */
+.container {
+    width: 100%;
+    max-width: 900px; /* keep max for desktop */
+    padding: 20px;
+    border-radius: 23px;
+    overflow: hidden;
+    position: relative;
+    background: var(--color-card);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust header on small screens */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+/* Stack prompt actions on smaller devices */
+@media (max-width: 768px) {
+    .prompt-actions {
+        grid-template-columns: 1fr; /* stack vertically */
+    }
+}
+
+/* Reduce font sizes for better fit */
+@media (max-width: 480px) {
+    .header .logo-wrapper h1 {
+        font-size: 1.5rem;
+    }
+    .prompt-container .prompt-input {
+        font-size: 0.95rem;
+        min-height: 100px;
+    }
+}
+
+
+/* Ensure custom arrow works on all devices */
+.prompt-actions .select-wrapper {
+    position: relative;
+}
+
+.prompt-actions .custom-select {
+    width: 100%;
+    height: 100%;
+    padding-right: 40px; /* space for arrow */
+    appearance: none; /* remove native arrow */
+    -webkit-appearance: none; /* Safari/iOS */
+    -moz-appearance: none; /* Firefox */
+    background-color: var(--color-input);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-text);
+}
+
+/* Always show arrow */
+.prompt-actions .select-wrapper::after {
+    content: "\f078"; /* Font Awesome down arrow */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    font-size: 0.9rem;
+    pointer-events: none;
+    color: var(--color-placeholder);
+    transform: translateY(-50%);
+    background-color: transparent;
+    z-index: 2;
+}
+
+/* Responsive stacking fix */
+@media (max-width: 768px) {
+    .prompt-actions {
+        grid-template-columns: 1fr; /* stack all */
+        gap: 10px;
+    }
+}
