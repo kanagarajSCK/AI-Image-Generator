@@ -10,7 +10,7 @@ export default function Header({ isDark, toggleTheme }) {
     target="_blank"
     rel="noopener noreferrer"
   >
-    <i className="fa-solid fa-wand-magic-sparkles"></i>
+    <i className="fa-solid fa-wand-magic-sparkles" style={{ color: "white" }}></i>
   </a>
 </div>
 
