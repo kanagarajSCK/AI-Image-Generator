@@ -5,8 +5,15 @@ export default function Header({ isDark, toggleTheme }) {
     <header className="header">
       <div className="logo-wrapper">
         <div className="logo">
-          <i className="fa-solid fa-wand-magic-sparkles"></i>
-        </div>
+  <a
+    href="https://www.linkedin.com/in/kanagarajsck/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fa-solid fa-wand-magic-sparkles"></i>
+  </a>
+</div>
+
         <h1>AI Image Generator</h1>
       </div>
       <button
