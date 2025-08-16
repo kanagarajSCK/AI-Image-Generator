@@ -6,8 +6,7 @@ export default function Header({ isDark, toggleTheme }) {
       <div className="logo-wrapper">
         <div className="logo">
   <a
-    href="https://www.linkedin.com/in/kanagarajsck/"
-    target="_blank"
+    href="#"
     rel="noopener noreferrer"
   >
     <i className="fa-solid fa-wand-magic-sparkles" style={{ color: "white" }}></i>
